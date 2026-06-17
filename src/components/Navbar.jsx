@@ -1,33 +1,18 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+export default function Navbar() {
   return (
-    <nav>
-      <ul
-        style={{
-          display: "flex",
-          gap: "20px",
-          listStyle: "none",
-        }}
-      >
-        <li>
-          <Link to="/">Home</Link>
-        </li>
+    <div>
+      <h2>🎲 Emoji App</h2>
 
-        <li>
-          <Link to="/products">Products</Link>
-        </li>
+      <nav>
+        <Link to="/">Home</Link> |{" "}
+        <Link to="/emoji">Generator</Link> |{" "}
+        <Link to="/about">About</Link>
+      </nav>
 
-        <li>
-          <Link to="/categories">Categories</Link>
-        </li>
-
-        <li>
-          <Link to="/cart">Cart</Link>
-        </li>
-      </ul>
-    </nav>
+      <hr />
+    </div>
   );
 }
-
-export default Navbar;
